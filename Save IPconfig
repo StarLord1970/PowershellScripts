@@ -1,0 +1,8 @@
+# Define the output file path
+$outputFile = "C:\ipconfig_output.txt"
+
+# Run ipconfig /all and save the output to the text file
+ipconfig /all | Out-File -FilePath $outputFile -Encoding utf8
+
+# Optional: Notify that the process is complete
+Write-Host "IP configuration details have been saved to $outputFile"
